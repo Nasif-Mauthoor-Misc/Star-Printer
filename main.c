@@ -1,27 +1,17 @@
-#include <stdio.h>
+#include "shapes.h"
 
 int main()
 {
     const char star = '*';
+    const char space = ' ';
     const short int numLines = 10;
 
-    for (int i = 0; i < numLines; ++i)
-    {
-        for (int j = 0; j <= i; ++j)
-        {
-            printf("%c", star);
-        }
-        printf("\n");
-    }
+    printf("Isosceles triangle with tip pointing to the right.\n");
+    rightPointTriangle(star, space, numLines);
 
-    for (int i = numLines-1; i > 0; --i)
-    {
-        for (int j = i; j > 0; --j)
-        {
-            printf("%c", star);
-        }
-        printf("\n");
-    }
+    printf("Isosceles triangle with tip pointing to the left.\n");
+    leftPointTriangle(space, star, numLines);
 
     return 0;
 }
+
